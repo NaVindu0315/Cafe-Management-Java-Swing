@@ -64,6 +64,7 @@ public class Displayimg extends HttpServlet {
              {
                  imdId=rs.getInt("imageid");
                  imgFileName=rs.getString("imagefilename");
+                // System.out.println("name" + imgFileName);
              }
              else
              {
@@ -82,7 +83,7 @@ public class Displayimg extends HttpServlet {
      }
         
         //RequestDispatcher rd;
-        request.setAttribute("id",imdId );
+        request.setAttribute("id",String.valueOf(imdId) );
         request.setAttribute("img", imgFileName);
         request.getRequestDispatcher("displayimage.jsp").forward(request, response);
         

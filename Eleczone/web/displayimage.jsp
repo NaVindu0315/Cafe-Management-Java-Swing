@@ -25,6 +25,14 @@
             </form>
         </div>
         <hr>
+        <%
+            String imgFilename =(String)request.getAttribute("img");
+            String imgId =(String)request.getAttribute("id");
+            //System.out.println(imgId);
+            System.out.println("name" + imgFilename);
+            
+
+            %>
         <div align="center">
             
             <table border="5px" style="width: 600px">
@@ -33,13 +41,20 @@
                     <th>Image </th>
                     
                 </tr>>
-                
+                <%
+                    if(imgFilename!=""&& imgId!="")
+                    {
+                    
+                    %>
                 
                 <tr>
-                    <td> </td>
-                    <td> </td>
+                    <td><%=imgId %> </td>
+                    <td> <img src="images/<%=imgFilename%>"> </td>
                     
-                </tr>>
+                </tr>
+                <%
+                    }
+                    %>
             </table>
             
         </div>
