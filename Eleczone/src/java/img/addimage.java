@@ -40,6 +40,9 @@ public class addimage extends HttpServlet {
         
         String imageFileName=file.getSubmittedFileName();
         System.out.println("Selected file name" +imageFileName);
+        String uploadPath="F:/other projects/Java-Image-and-Cart/Eleczone/images/"+imageFileName;
+        System.out.println(uploadPath);
+        //request.getRequestDispatcher("second.jsp").forward(request, response);
         
     }
 
