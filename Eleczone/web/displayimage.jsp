@@ -24,5 +24,24 @@
                 
             </form>
         </div>
+        <hr>
+        <div align="center">
+            
+            <table border="5px" style="width: 600px">
+                <tr>
+                    <th>Image ID </th>
+                    <th>Image </th>
+                    
+                </tr>>
+                
+                
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    
+                </tr>>
+            </table>
+            
+        </div>
     </body>
 </html>
