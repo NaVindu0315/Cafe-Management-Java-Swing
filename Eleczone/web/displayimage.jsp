@@ -17,9 +17,9 @@
             <a href="index.jsp">Add Image Page</a>
         </div>
         <div align="center">
-            <form>
+            <form action="Displayimg" method="post">
                 Enter Image ID: 
-                <input type="number">
+                <input type="number" name="imageId">
                 <input type="submit" value="Display Image">
                 
             </form>
