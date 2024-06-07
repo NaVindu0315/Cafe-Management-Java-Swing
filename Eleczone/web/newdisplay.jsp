@@ -42,7 +42,7 @@
         <h1 align="center"> Item 2</h1>
         <div align="center">><img src="elecimages/<%=pic2%>" height="300" width="300" ></div>
         <hr>
-        <h1 align="center"> Item 1</h1>
+        <h1 align="center"> Item 3</h1>
         <div align="center">><img src="elecimages/<%=pic3%>" height="300" width="300" ></div>
     </body>
 </html>
