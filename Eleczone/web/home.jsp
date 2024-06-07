@@ -14,11 +14,30 @@
     <body>
         <h1 align="center">Item 1</h1>
         <div align="center">
+            <form action="item1" method="post" enctype="multipart/form-data">
+            select image :
+            <input type="file" name="image"> 
+            <input type="submit" value="Add image">
+        </form>
+        </div>
+        
+         <h1 align="center">Item 2</h1>
+        <div align="center">
             <form action="addimage" method="post" enctype="multipart/form-data">
             select image :
             <input type="file" name="image"> 
             <input type="submit" value="Add image">
         </form>
         </div>
+         
+          <h1 align="center">Item 3</h1>
+        <div align="center">
+            <form action="addimage" method="post" enctype="multipart/form-data">
+            select image :
+            <input type="file" name="image"> 
+            <input type="submit" value="Add image">
+        </form>
+        </div>
+          <h1 align="center"><a href="newdisplay.jsp">view Items</a></h1>
     </body>
 </html>
