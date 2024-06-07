@@ -5,7 +5,9 @@
  */
 package img;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -43,6 +45,19 @@ public class addimage extends HttpServlet {
         String uploadPath="F:/other projects/Java-Image-and-Cart/Eleczone/images/"+imageFileName;
         System.out.println(uploadPath);
         //request.getRequestDispatcher("second.jsp").forward(request, response);
+        
+        FileOutputStream fos = new FileOutputStream(uploadPath);
+        InputStream is = file.getInputStream();
+        try{
+        byte[] data = new byte[is.available()];
+        is.read(data);
+        fos.write(data);
+        fos.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
         
     }
 
