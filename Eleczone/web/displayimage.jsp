@@ -49,7 +49,7 @@
                 
                 <tr>
                     <td><%=imgId %> </td>
-                    <td> <img src="images/<%=imgFilename%>"> </td>
+                    <td> <img src="images/<%=imgFilename%>" width="200" height="150"> </td>
                     
                 </tr>
                 <%
