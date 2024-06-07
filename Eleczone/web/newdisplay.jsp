@@ -9,9 +9,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Display Items </title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1 align="center">View Items!</h1>
+        
+        
+        <h1 align="center"> Item 1</h1>
+        <div align="center">><img src="" height="300" width="300" ></div>
+        <hr>
+        <h1 align="center"> Item 1</h1>
+        <div align="center">><img src="" height="300" width="300" ></div>
+        <hr>
+        <h1 align="center"> Item 1</h1>
+        <div align="center">><img src="" height="300" width="300" ></div>
     </body>
 </html>
