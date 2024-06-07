@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 
+
 /**
  *
  * @author Acer
@@ -36,6 +37,9 @@ public class addimage extends HttpServlet {
       
         System.out.println("test");
         Part file = request.getPart("image");
+        
+        String imageFileName=file.getSubmittedFileName();
+        System.out.println("Selected file name" +imageFileName);
         
     }
 
