@@ -7,7 +7,7 @@ package img;
 
 //import com.mysql.jdbc.Connection;
 import java.sql.*;
-import java.sql.Connection;
+//import java.sql.Connection;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-
+import dbcon.DBConnection;
 
 
 /**
@@ -46,7 +46,7 @@ public class addimage extends HttpServlet {
         String imageFileName=file.getSubmittedFileName();
        // System.out.println("Selected file name" +imageFileName);
         String uploadPath="F:/other projects/Java-Image-and-Cart/Eleczone/images/"+imageFileName;
-       // System.out.println(uploadPath);
+        System.out.println(uploadPath);
         //request.getRequestDispatcher("second.jsp").forward(request, response);
         //to save the file to selected directory
         FileOutputStream fos = new FileOutputStream(uploadPath);
@@ -63,7 +63,7 @@ public class addimage extends HttpServlet {
         }
         
         //************ for jdbc
-        Connection connection = null;
+        /*Connection connection = null;
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -89,10 +89,35 @@ public class addimage extends HttpServlet {
         {
                System.out.println(e);
         }
+        */
+        //my method
+        
+        PreparedStatement pst = null;
+        Connection conn = null;
+        
+        try
+     {
+         String qry ="insert into image(imagefilename) values(?)";
+         conn =DBConnection.initializeDatabase();
+         pst = conn.prepareStatement(qry);
+         pst.setString(1, imageFileName);
+         
+         
+         pst.executeUpdate();
+         pst.close();
+         conn.close();
+         
+     }
+     catch(Exception e)
+     {
+         System.out.print(e);
+     }
+    }
+        
         
         
     }
 
   
 
-}
+
