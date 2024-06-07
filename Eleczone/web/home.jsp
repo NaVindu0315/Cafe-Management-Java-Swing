@@ -32,7 +32,7 @@
          
           <h1 align="center">Item 3</h1>
         <div align="center">
-            <form action="addimage" method="post" enctype="multipart/form-data">
+            <form action="item3" method="post" enctype="multipart/form-data">
             select image :
             <input type="file" name="image"> 
             <input type="submit" value="Add image">
