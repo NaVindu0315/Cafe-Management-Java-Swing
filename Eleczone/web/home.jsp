@@ -39,5 +39,6 @@
         </form>
         </div>
           <h1 align="center"><a href="newdisplay.jsp">view Items</a></h1>
+         
     </body>
 </html>

@@ -71,6 +71,7 @@ public class item2 extends HttpServlet {
          conn =DBConnection.initializeDatabase();
          pst = conn.prepareStatement(qry);
          pst.setString(1, imageFileName);
+         request.getRequestDispatcher("newdisplay.jsp").forward(request, response);
          
          
          pst.executeUpdate();
