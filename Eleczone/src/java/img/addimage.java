@@ -5,6 +5,9 @@
  */
 package img;
 
+//import com.mysql.jdbc.Connection;
+import java.sql.*;
+import java.sql.Connection;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,15 +40,15 @@ public class addimage extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
       
-        System.out.println("test");
+        //to get the file name of the picture
         Part file = request.getPart("image");
         
         String imageFileName=file.getSubmittedFileName();
-        System.out.println("Selected file name" +imageFileName);
+       // System.out.println("Selected file name" +imageFileName);
         String uploadPath="F:/other projects/Java-Image-and-Cart/Eleczone/images/"+imageFileName;
-        System.out.println(uploadPath);
+       // System.out.println(uploadPath);
         //request.getRequestDispatcher("second.jsp").forward(request, response);
-        
+        //to save the file to selected directory
         FileOutputStream fos = new FileOutputStream(uploadPath);
         InputStream is = file.getInputStream();
         try{
@@ -58,6 +61,35 @@ public class addimage extends HttpServlet {
         {
             e.printStackTrace();
         }
+        
+        //************ for jdbc
+        Connection connection = null;
+        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/image_tutorial", "", "");
+           // PreparedStatement stmt;
+           PreparedStatement stmt = connection.prepareStatement("insert into image(imagefilename) values(?)");
+
+           // String query ="insert into image(imagefilename) values(?)";
+            //stmt.connection.prepareStatement(query);
+            stmt.setString(1, imageFileName);
+            int rows = stmt.executeUpdate();
+            if(rows>0)
+            {
+                   System.out.println("Added succesfully");
+            }
+            else
+            {
+                System.out.println("failed to upload");
+            }
+            
+        }
+        catch(Exception e)
+        {
+               System.out.println(e);
+        }
+        
         
     }
 
