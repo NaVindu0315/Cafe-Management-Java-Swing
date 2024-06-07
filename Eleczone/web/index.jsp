@@ -14,6 +14,9 @@
     </head>
     <body>
         <h1 style="color: red" align="center">Add image Details </h1>
+        <div>
+            <a href="displayimage.jsp">Display Page</a>
+        </div>
         <div align="center">
             <form action="addimage" method="post" enctype="multipart/form-data">
             select image :
@@ -21,5 +24,6 @@
             <input type="submit" value="Add image">
         </form>
         </div>
+        
     </body>
 </html>
