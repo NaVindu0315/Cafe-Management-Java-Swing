@@ -15,7 +15,7 @@
     <body>
         <h1 style="color: red" align="center">Add image Details </h1>
         <div align="center">
-        <form>
+            <form action="addimage" method="post" enctype="multipart/form-data">
             select image :
             <input type="file"> 
             <input type="submit" value="Add image">
