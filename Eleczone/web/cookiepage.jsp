@@ -16,7 +16,9 @@
         <h2>
         <div align="center">
             <form action="getcookies" method="post">
+                User name
                 <input type="text" name="username">
+                Item name
                 <input type="text" name="itemname">
                 <input type="submit" value="save">
             </form>
