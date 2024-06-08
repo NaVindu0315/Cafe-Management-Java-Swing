@@ -23,6 +23,9 @@
         <div>
             <a href="cookiepage.jsp">Cookie Page</a>
         </div>
+         <div>
+            <a href="listings.jsp">Items Page</a>
+        </div>
         <div align="center">
             <form action="addimage" method="post" enctype="multipart/form-data">
             select image :
