@@ -52,8 +52,10 @@ public class getcookies extends HttpServlet {
         response.addCookie(cref1);
         response.addCookie(cref2);
         
-        RequestDispatcher rq = request.getRequestDispatcher("displaycookies");
-        rq.forward(request, response);
+        /*RequestDispatcher rq = request.getRequestDispatcher("displaycookies");
+        rq.forward(request, response);*/
+       // request.getRequestDispatcher("displaycookies").forward(request, response);
+        response.sendRedirect("displaycookies");
         
         
         
