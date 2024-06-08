@@ -20,6 +20,9 @@
         <div>
             <a href="displayimage.jsp">Display Page</a>
         </div>
+        <div>
+            <a href="cookiepage.jsp">Cookie Page</a>
+        </div>
         <div align="center">
             <form action="addimage" method="post" enctype="multipart/form-data">
             select image :
