@@ -46,6 +46,32 @@ public class clearcart extends HttpServlet {
         ckitemtotal1.setMaxAge(0);
         response.addCookie(ckitemtotal1);
         
+        ///for item2
+        Cookie ckitemname2 = new Cookie("ckitemname2", "");
+        ckitemname2.setMaxAge(0);
+        response.addCookie(ckitemname2);
+        
+        Cookie ckitem2 = new Cookie("ckitem2", "");
+        ckitem2.setMaxAge(0);
+        response.addCookie(ckitem2);
+        
+        Cookie ckitemtotal2 = new Cookie("ckitemtotal2", "");
+        ckitemtotal2.setMaxAge(0);
+        response.addCookie(ckitemtotal2);
+        
+        //for 3rd item
+        Cookie ckitemname3 = new Cookie("ckitemname3", "");
+        ckitemname3.setMaxAge(0);
+        response.addCookie(ckitemname3);
+        
+        Cookie ckitem3 = new Cookie("ckitem3", "");
+        ckitem3.setMaxAge(0);
+        response.addCookie(ckitem3);
+        
+        Cookie ckitemtotal3 = new Cookie("ckitemtotal3", "");
+        ckitemtotal3.setMaxAge(0);
+        response.addCookie(ckitemtotal3);
+        
         response.sendRedirect("listings.jsp");
         
     }
