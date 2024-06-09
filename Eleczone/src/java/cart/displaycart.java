@@ -120,7 +120,8 @@ public class displaycart extends HttpServlet {
         System.out.println("item 3 total ="+item3total);
         
         System.out.println("Total ="+Total);
-        
+        out.print("<h1 align='center'> Pako");
+        out.print("</h1>");
        /* Cookie arr[] = request.getCookies();
         out.print("<h1 align='center'> Pako");
         out.print("</h1>");
