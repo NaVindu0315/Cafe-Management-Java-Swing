@@ -16,7 +16,7 @@
         <hr>
         <div align="center">
             <h1>
-                <form>
+                <form action="setcart" method="post">
                     Iphone 15
                     <br>
                     <select name="itemname1">
@@ -37,7 +37,7 @@
          <hr>
          <div align="center">
             <h1>
-                <form>
+                <form action="setcart" method="post">
                     Iphone 14
                    <br>
                     <select name="itemname2">
@@ -58,13 +58,13 @@
           <hr>
          <div align="center">
             <h1>
-                <form>
-                    MacBook Air 3
+                <form action="setcart" method="post">
+                    MacBook Air M3
                    <br>
                     <select name="itemname3">
                     <option value="">Select your item</option>
                    
-                    <option value="MacBook Air 3">MacBook Air 3</option>
+                    <option value="MacBook Air M3">MacBook Air M3</option>
                     </select>
                     <br>
                     <input type="number" name="itemcount3">
