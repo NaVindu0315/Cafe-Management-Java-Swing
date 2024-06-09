@@ -22,7 +22,7 @@
                     <select name="itemname1">
                     <option value="">Select your item</option>
                    
-                    <option value="Iphone 15">Iphone 15</option>
+                    <option value="Iphone15">Iphone 15</option>
                     </select>
                     <br>
                     <input type="number" name="itemcount1">
@@ -43,7 +43,7 @@
                     <select name="itemname2">
                     <option value="">Select your item</option>
                    
-                    <option value="Iphone 14">Iphone 14</option>
+                    <option value="Iphone14">Iphone 14</option>
                     </select>
                     <br>
                     <input type="number" name="itemcount2">
@@ -64,7 +64,7 @@
                     <select name="itemname3">
                     <option value="">Select your item</option>
                    
-                    <option value="MacBook Air M3">MacBook Air M3</option>
+                    <option value="MacBook_Air_M3">MacBook Air M3</option>
                     </select>
                     <br>
                     <input type="number" name="itemcount3">
@@ -76,6 +76,11 @@
                 </form>
             </h1>
             </div>
+          <div align="center">
+              <form action="clearcart" method="post">
+                  <input type="submit" value="clear cart">
+              </form>
+          </div>
         
     </body>
 </html>

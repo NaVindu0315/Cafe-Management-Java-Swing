@@ -18,44 +18,48 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Acer
  */
-@WebServlet(name = "displaycart", urlPatterns = {"/displaycart"})
-public class displaycart extends HttpServlet {
+@WebServlet(name = "clearcart", urlPatterns = {"/clearcart"})
+public class clearcart extends HttpServlet {
 
+ 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-      
+        try (PrintWriter out = response.getWriter()) {
+            
+        }
     }
 
-    
+  
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-       response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        Cookie arr[] = request.getCookies();
-        out.print("<h1 align='center'> Pako");
-        out.print("</h1>");
-        System.out.println("hutt");
-        System.out.println(arr[1].getValue());
-        System.out.println(arr[2].getValue());
-        System.out.println(arr[3].getValue());
-        System.out.println(arr[4].getValue());
-        System.out.println(arr[5].getValue());
-        System.out.println(arr[6].getValue());
-        System.out.println(arr[7].getValue());
-        System.out.println(arr[8].getValue());
-        System.out.println(arr[9].getValue());
-        System.out.println(arr[10].getValue());
-    }
-
-   
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        Cookie[] cookies = request.getCookies();
+if (cookies != null) {
+    for (Cookie cookie : cookies) {
+        // Clear the cookie
+        cookie.setMaxAge(0);
+
+        // Optionally, set the path and domain to match the original cookie
+        // (important for proper deletion across paths/domains)
+      /*  cookie.setPath(cookie.getPath());  // Assuming the original path is used
+        // cookie.setDomain(cookie.getDomain());  // Uncomment if needed for specific domain
+
+        // Add the modified cookie back to the response*/
+        response.addCookie(cookie);
+      request.getRequestDispatcher("listings.jsp").forward(request, response);
+    }
+}
+
+    }
+
+ 
 
 }

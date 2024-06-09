@@ -7,6 +7,7 @@ package cart;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -40,10 +41,15 @@ public class setcart extends HttpServlet {
         response.setContentType("text/html");
         
         ///to get item name
-        String item1name = request.getParameter("itemname1") != null ? request.getParameter("itemname1") : "";
-        String item2name = request.getParameter("itemname2") != null ? request.getParameter("itemname2") : "";
-        String item3name = request.getParameter("itemname3") != null ? request.getParameter("itemname3") : "";
+        String item1name = request.getParameter("itemname1") != null ? request.getParameter("itemname1") : "empty";
+        String item2name = request.getParameter("itemname2") != null ? request.getParameter("itemname2") : "empty";
+        String item3name = request.getParameter("itemname3") != null ? request.getParameter("itemname3") : "empty";
         
+        //encoding
+       /* String encodeitem1 = URLEncoder.encode(item1name,"UTF-8");
+        String encodeitem2 = URLEncoder.encode(item2name,"UTF-8");
+        String encodeitem3 = URLEncoder.encode(item3name,"UTF-8");*/
+       // String encodeitem4 = URLEncoder.encode(item3name, item3name);
         //to get item count
          Integer item1 = parseInteger(request.getParameter("itemcount1"), 0);
          Integer item2 = parseInteger(request.getParameter("itemcount2"), 0);
@@ -103,7 +109,7 @@ public class setcart extends HttpServlet {
          response.addCookie(cktotal);
          
          //navigate to display cart
-         response.sendRedirect("displaycookies");
+         response.sendRedirect("displaycart");
          
          
          
