@@ -75,10 +75,15 @@ public class displaycart extends HttpServlet {
         String item1 = "";
         String item2 = "";
         String item3 = "";
-        String item1total = "";
+       /* String item1total = "";
         String item2total = "";
-        String item3total = ""; 
+        String item3total = ""; */
+        double item1total = 0.0;
+        double item2total = 0.0;
+        double item3total = 0.0; 
         String Total = "";
+        
+        double totaltoal = item1total + item2total+ item3total;
         
         Cookie[] cookies = request.getCookies();
         
@@ -96,13 +101,25 @@ public class displaycart extends HttpServlet {
             item2 = cookie.getValue();
         } else if (cookie.getName().equals("ckitem3")) {
             item3 = cookie.getValue();
-        } else if (cookie.getName().equals("ckitemtotal1")) {
+        } 
+         else if (cookie.getName().equals("ckitemtotal1")) {
+    item1total = cookie.getValue()!= null? Double.parseDouble(cookie.getValue()) : 0.0;
+} else if (cookie.getName().equals("ckitemtotal2")) {
+    item2total = cookie.getValue()!= null? Double.parseDouble(cookie.getValue()) : 0.0;
+} else if (cookie.getName().equals("ckitemtotal3")) {
+    item3total = cookie.getValue()!= null? Double.parseDouble(cookie.getValue()) : 0.0;
+        /*else if (cookie.getName().equals("ckitemtotal1")) {
             item1total = cookie.getValue();
         } else if (cookie.getName().equals("ckitemtotal2")) {
             item2total = cookie.getValue();
         } else if (cookie.getName().equals("ckitemtotal3")) {
             item3total = cookie.getValue();
-        } else if (cookie.getName().equals("cktotal")) {
+        }*/
+        
+        
+        
+        
+}else if (cookie.getName().equals("cktotal")) {
             Total = cookie.getValue();
         }
     }
@@ -119,7 +136,7 @@ public class displaycart extends HttpServlet {
         System.out.println("item 2 total ="+item2total);
         System.out.println("item 3 total ="+item3total);
         
-        System.out.println("Total ="+Total);
+        System.out.println("Total ="+(item1total+item2total+item3total));
         out.print("<h1 align='center'> Pako");
         out.print("</h1>");
        /* Cookie arr[] = request.getCookies();
