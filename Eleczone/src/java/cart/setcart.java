@@ -60,6 +60,20 @@ public class setcart extends HttpServlet {
          HttpSession session = request.getSession();
          
          session.setAttribute("item1name",item1name);
+         session.setAttribute("item2name",item2name);
+         session.setAttribute("item3name",item3name);
+         
+         session.setAttribute("item1",item1);
+         session.setAttribute("item2",item2);
+         session.setAttribute("item3",item3);
+         
+         session.setAttribute("item1total",item1total);
+         session.setAttribute("item2total",item2total);
+         session.setAttribute("item3total",item3total);
+         
+         session.setAttribute("Total",Total);
+         
+         
          
          /*cookies
          ///for item names
