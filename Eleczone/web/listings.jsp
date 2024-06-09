@@ -16,7 +16,7 @@
         <hr>
         <div align="center">
             <h1>
-                <form action="setcart" method="post">
+                <form action="Item1cart" method="post">
                     Iphone 15
                     <br>
                     <select name="itemname1">
@@ -37,7 +37,7 @@
          <hr>
          <div align="center">
             <h1>
-                <form action="setcart" method="post">
+                <form action="Item2cart" method="post">
                     Iphone 14
                    <br>
                     <select name="itemname2">
@@ -58,7 +58,7 @@
           <hr>
          <div align="center">
             <h1>
-                <form action="setcart" method="post">
+                <form action="Item3cart" method="post">
                     MacBook Air M3
                    <br>
                     <select name="itemname3">
