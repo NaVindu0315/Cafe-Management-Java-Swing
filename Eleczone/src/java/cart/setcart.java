@@ -14,6 +14,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -44,13 +45,7 @@ public class setcart extends HttpServlet {
         String item1name = request.getParameter("itemname1") != null ? request.getParameter("itemname1") : "empty";
         String item2name = request.getParameter("itemname2") != null ? request.getParameter("itemname2") : "empty";
         String item3name = request.getParameter("itemname3") != null ? request.getParameter("itemname3") : "empty";
-        
-        //encoding
-       /* String encodeitem1 = URLEncoder.encode(item1name,"UTF-8");
-        String encodeitem2 = URLEncoder.encode(item2name,"UTF-8");
-        String encodeitem3 = URLEncoder.encode(item3name,"UTF-8");*/
-       // String encodeitem4 = URLEncoder.encode(item3name, item3name);
-        //to get item count
+         //to get item count
          Integer item1 = parseInteger(request.getParameter("itemcount1"), 0);
          Integer item2 = parseInteger(request.getParameter("itemcount2"), 0);
          Integer item3 = parseInteger(request.getParameter("itemcount3"), 0);
@@ -60,6 +55,13 @@ public class setcart extends HttpServlet {
          Integer item3total = 315000 * item3;
          
          Integer Total = item1total + item2total+ item3total;
+         
+         ///using sessions
+         HttpSession session = request.getSession();
+         
+         session.setAttribute("item1name",item1name);
+         
+         /*cookies
          ///for item names
          Cookie ckitemname1 = new Cookie("ckitemname1",item1name);
          Cookie ckitemname2 = new Cookie("ckitemname2",item2name);
@@ -107,8 +109,13 @@ public class setcart extends HttpServlet {
          response.addCookie(ckitemtotal3);
          //10
          response.addCookie(cktotal);
-         
+         */
          //navigate to display cart
+         
+
+
+         
+         
          response.sendRedirect("displaycart");
          
          

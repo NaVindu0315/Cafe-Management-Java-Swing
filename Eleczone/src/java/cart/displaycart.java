@@ -13,6 +13,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -33,7 +34,12 @@ public class displaycart extends HttpServlet {
             throws ServletException, IOException {
        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        Cookie arr[] = request.getCookies();
+        
+        
+        HttpSession session = request.getSession();
+        String retrievedUsername = (String) session.getAttribute("item1name");
+        System.out.println(retrievedUsername);
+       /* Cookie arr[] = request.getCookies();
         out.print("<h1 align='center'> Pako");
         out.print("</h1>");
         System.out.println("new list");
@@ -57,7 +63,7 @@ public class displaycart extends HttpServlet {
         System.out.println(arr[9].getValue());
         System.out.println("10 tota;");
         System.out.println(arr[10].getValue());
-        System.out.println("end of list");
+        System.out.println("end of list");*/
     }
 
    
