@@ -36,17 +36,28 @@ public class displaycart extends HttpServlet {
         Cookie arr[] = request.getCookies();
         out.print("<h1 align='center'> Pako");
         out.print("</h1>");
-        System.out.println("hutt");
+        System.out.println("new list");
+        System.out.println("1 name 1");
         System.out.println(arr[1].getValue());
+        System.out.println("2 name 2");
         System.out.println(arr[2].getValue());
+        System.out.println("3 name 3");
         System.out.println(arr[3].getValue());
+        System.out.println("4 item 1 count");
         System.out.println(arr[4].getValue());
+        System.out.println("5 item 2 count");
         System.out.println(arr[5].getValue());
+        System.out.println("6 item 3 count");
         System.out.println(arr[6].getValue());
+        System.out.println("7 item 1 total");
         System.out.println(arr[7].getValue());
+        System.out.println("8 item 2 total");
         System.out.println(arr[8].getValue());
+        System.out.println("9 item 3 total");
         System.out.println(arr[9].getValue());
+        System.out.println("10 tota;");
         System.out.println(arr[10].getValue());
+        System.out.println("end of list");
     }
 
    

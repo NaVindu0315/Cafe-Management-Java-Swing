@@ -81,6 +81,11 @@
                   <input type="submit" value="clear cart">
               </form>
           </div>
+          <div align="center">
+              <form action="displaycart" method="post">
+                  <input type="submit" value="check cookies">
+              </form>
+          </div>
         
     </body>
 </html>
