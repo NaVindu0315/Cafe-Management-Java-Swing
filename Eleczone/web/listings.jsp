@@ -55,6 +55,27 @@
                 </form>
             </h1>
             </div>
+          <hr>
+         <div align="center">
+            <h1>
+                <form>
+                    MacBook Air 3
+                   <br>
+                    <select name="itemname3">
+                    <option value="">Select your item</option>
+                   
+                    <option value="MacBook Air 3">MacBook Air 3</option>
+                    </select>
+                    <br>
+                    <input type="number" name="itemcount3">
+                    <br>
+                    <input type="submit" value="Add to cart">
+                    
+                    
+                    
+                </form>
+            </h1>
+            </div>
         
     </body>
 </html>
