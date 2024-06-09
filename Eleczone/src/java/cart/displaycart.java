@@ -36,9 +36,91 @@ public class displaycart extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         
+        //session
+        /*
         HttpSession session = request.getSession();
-        String retrievedUsername = (String) session.getAttribute("item1name");
-        System.out.println(retrievedUsername);
+        String item1name = (String) session.getAttribute("item1name");
+        String item2name = (String) session.getAttribute("item2name");
+        String item3name = (String) session.getAttribute("item3name");
+        
+        int item1 = (int) session.getAttribute("item1");
+        int item2 = (int) session.getAttribute("item2");
+        int item3 = (int) session.getAttribute("item3");
+        
+        int item1total = (int) session.getAttribute("item1total");
+        int item2total = (int) session.getAttribute("item2total");
+        int item3total = (int) session.getAttribute("item3total");
+        
+        int Total = (int)session.getAttribute("Total");
+        
+        System.out.println("item 1 ="+item1name);
+        System.out.println("item 2 ="+item2name);
+        System.out.println("item 3 ="+item3name);
+        
+        System.out.println("item 1 count ="+item1);
+        System.out.println("item 2 count ="+item2);
+        System.out.println("item 3 count ="+item3);
+        
+        System.out.println("item 1 total ="+item1total);
+        System.out.println("item 2 total ="+item2total);
+        System.out.println("item 3 total ="+item3total);
+        
+        System.out.println("Total ="+Total);
+        */
+        
+        //to cookies
+        String item1name = "";
+        String item2name = "";
+        String item3name = "";
+        String item1 = "";
+        String item2 = "";
+        String item3 = "";
+        String item1total = "";
+        String item2total = "";
+        String item3total = ""; 
+        String Total = "";
+        
+        Cookie[] cookies = request.getCookies();
+        
+        if (cookies!= null) {
+    for (Cookie cookie : cookies) {
+        if (cookie.getName().equals("ckitemname1")) {
+            item1name = cookie.getValue();
+        } else if (cookie.getName().equals("ckitemname2")) {
+            item2name = cookie.getValue();
+        } else if (cookie.getName().equals("ckitemname3")) {
+            item3name = cookie.getValue();
+        } else if (cookie.getName().equals("ckitem1")) {
+            item1 = cookie.getValue();
+        } else if (cookie.getName().equals("ckitem2")) {
+            item2 = cookie.getValue();
+        } else if (cookie.getName().equals("ckitem3")) {
+            item3 = cookie.getValue();
+        } else if (cookie.getName().equals("ckitemtotal1")) {
+            item1total = cookie.getValue();
+        } else if (cookie.getName().equals("ckitemtotal2")) {
+            item2total = cookie.getValue();
+        } else if (cookie.getName().equals("ckitemtotal3")) {
+            item3total = cookie.getValue();
+        } else if (cookie.getName().equals("cktotal")) {
+            Total = cookie.getValue();
+        }
+    }
+    
+    System.out.println("item 1 ="+item1name);
+        System.out.println("item 2 ="+item2name);
+        System.out.println("item 3 ="+item3name);
+        
+        System.out.println("item 1 count ="+item1);
+        System.out.println("item 2 count ="+item2);
+        System.out.println("item 3 count ="+item3);
+        
+        System.out.println("item 1 total ="+item1total);
+        System.out.println("item 2 total ="+item2total);
+        System.out.println("item 3 total ="+item3total);
+        
+        System.out.println("Total ="+Total);
+        
        /* Cookie arr[] = request.getCookies();
         out.print("<h1 align='center'> Pako");
         out.print("</h1>");
@@ -64,6 +146,7 @@ public class displaycart extends HttpServlet {
         System.out.println("10 tota;");
         System.out.println(arr[10].getValue());
         System.out.println("end of list");*/
+    }
     }
 
    

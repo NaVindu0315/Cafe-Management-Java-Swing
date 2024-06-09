@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.RequestDispatcher;
 
 /**
  *
@@ -57,7 +58,7 @@ public class setcart extends HttpServlet {
          Integer Total = item1total + item2total+ item3total;
          
          ///using sessions
-         HttpSession session = request.getSession();
+       /*  HttpSession session = request.getSession();
          
          session.setAttribute("item1name",item1name);
          session.setAttribute("item2name",item2name);
@@ -72,10 +73,13 @@ public class setcart extends HttpServlet {
          session.setAttribute("item3total",item3total);
          
          session.setAttribute("Total",Total);
+         String sessionId = session.getId();
+         response.sendRedirect("displaycart?sessionId=" + sessionId);
+         //
+      */
          
          
-         
-         /*cookies
+         //cookies
          ///for item names
          Cookie ckitemname1 = new Cookie("ckitemname1",item1name);
          Cookie ckitemname2 = new Cookie("ckitemname2",item2name);
@@ -123,14 +127,14 @@ public class setcart extends HttpServlet {
          response.addCookie(ckitemtotal3);
          //10
          response.addCookie(cktotal);
-         */
+         
          //navigate to display cart
-         
-
-
-         
-         
          response.sendRedirect("displaycart");
+
+
+         
+         
+        // response.sendRedirect("displaycart");
          
          
          
