@@ -137,33 +137,75 @@ public class displaycart extends HttpServlet {
         System.out.println("item 3 total ="+item3total);
         
         System.out.println("Total ="+(item1total+item2total+item3total));
-        out.print("<h1 align='center'> Pako");
+     /*   out.print("<h1 align='center'> Pako");
         out.print("</h1>");
         
-     
+        out.print("<div align='center'>");
+        out.print("<h2>");
+        out.print("<table>");
+        out.print("  <tr>");
+        out.print("    <td>Column 1</td>");
+    out.print("    <td>Column 2</td>");
+    out.print("    <td>Column 3</td>");
+    out.print("  </tr>");
+    out.print("  <tr>");
+    out.print("    <td>Data 1</td>");
+    out.print("    <td>Data 2</td>");
+    out.print("    <td>Data 3</td>");
+    out.print("  </tr>");
+    out.print("  <tr>");
+    out.print("    <td>Data 4</td>");
+    out.print("    <td>Data 5</td>");
+    out.print("    <td>Data 6</td>");
+    out.print("  </tr>");
+    out.print("  <tr>");
+    out.print("    <td>Data 7</td>");
+    out.print("    <td>Data 8</td>");   
+    out.print("    <td>Data 9</td>");   
+    out.print("  </tr>");
+    out.print("</table>");
+    out.print("</h2>");
+    out.print("</div>");*/
+                out.print("<!DOCTYPE html>");
+out.print("<html>");
+out.print("<head>");
+out.print("<title>Table with Styled Cells</title>");
+out.print("</head>");
+out.print("<body>");
 
+out.print("<h1 style='text-align: center;'> Pako </h1>");
+
+out.print("<div style='text-align: center;'>");
+out.print("<h2>");
 out.print("<table>");
-out.print("  <tr>");
-out.print("    <td>Column 1</td>");
-out.print("    <td>Column 2</td>");
-out.print("    <td>Column 3</td>");
-out.print("  </tr>");
-out.print("  <tr>");
-out.print("    <td>Data 1</td>");
-out.print("    <td>Data 2</td>");
-out.print("    <td>Data 3</td>");
-out.print("  </tr>");
-out.print("  <tr>");
-out.print("    <td>Data 4</td>");
-out.print("    <td>Data 5</td>");
-out.print("    <td>Data 6</td>");
-out.print("  </tr>");
-out.print("  <tr>");
-out.print("    <td>Data 7</td>");
-out.print("    <td>Data 8</td>");
-out.print("    <td>Data 9</td>");
-out.print("  </tr>");
+out.write("  <tr>");
+out.write("    <th style='width: 150px; height: 50px;'>Column 1</th>");  // Increased width and height for header
+out.write("    <th style='width: 150px; height: 50px;'>Column 2</th>");
+out.write("    <th style='width: 150px; height: 50px;'>Column 3</th>");
+out.write("  </tr>");
+out.write("  <tr>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 1</td>");  // Increased width and height for data cells
+out.write("    <td style='width: 150px; height: 30px;'>Data 2</td>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 3</td>");
+out.write("  </tr>");
+out.write("  <tr>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 4</td>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 5</td>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 6</td>");
+out.write("  </tr>");
+out.write("  <tr>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 7</td>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 8</td>");
+out.write("    <td style='width: 150px; height: 30px;'>Data 9</td>");
+out.write("  </tr>");
 out.print("</table>");
+out.print("</h2>");
+out.print("</div>");
+
+out.print("</body>");
+out.print("</html>");
+     
+     
 
        /* Cookie arr[] = request.getCookies();
         out.print("<h1 align='center'> Pako");
