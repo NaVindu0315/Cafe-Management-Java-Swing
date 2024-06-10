@@ -185,24 +185,24 @@ out.print("<h1 style='text-align: center;'> Shopping cart </h1>");
 out.print("<div align='center'>");
 out.print("<h2>");
 out.print("<table>");
-out.write("  <tr align='center'>");
-out.write("    <th style='width: 150px; height: 70px;'>Item Name</th>");  // Increased width and height for header
-out.write("    <th style='width: 150px; height: 70px;'>Item Count</th>");
-out.write("    <th style='width: 150px; height: 70px;'>Total</th>");
+out.write("  <tr>");
+out.write("    <td style='width: 150px; height: 70px;'>  Item</td>");  // Increased width and height for data cells
+out.write("    <td style='width: 150px; height: 70px;'>Count</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Total</td>");
 out.write("  </tr>");
 out.write("  <tr>");
-out.write("    <td style='width: 150px; height: 70px;'>  Data 1</td>");  // Increased width and height for data cells
-out.write("    <td style='width: 150px; height: 70px;'>Data 2</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+item1name+"</td>");  // Increased width and height for data cells
+out.write("    <td style='width: 150px; height: 70px;'>"+item1+"</td>");
 out.write("    <td style='width: 150px; height: 70px;'>"+total1+"</td>");
 out.write("  </tr>");
 out.write("  <tr>");
-out.write("    <td style='width: 150px; height: 70px;'>Data 4</td>");
-out.write("    <td style='width: 150px; height: 70px;'>Data 5</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+item2name+"</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+item2+"</td>");
 out.write("    <td style='width: 150px; height: 70px;'>"+total2+"</td>");
 out.write("  </tr>");
 out.write("  <tr>");
-out.write("    <td style='width: 150px; height: 70px;'>Data 7</td>");
-out.write("    <td style='width: 150px; height: 70px;'>Data 8</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+item3name+"</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+item3+"</td>");
 out.write("    <td style='width: 150px; height: 70px;'>"+total3+"</td>");
 out.write("  </tr>");
 
@@ -214,6 +214,14 @@ out.write("  </tr>");
 out.print("</table>");
 out.print("</h2>");
 out.print("</div>");
+
+
+out.print("<div align='center'>");
+out.print("  <form action='clearcart' method='post'>");
+out.print("    <input type='submit' value='Pay Now'>");
+out.print("  </form>");
+out.print("</div>");
+
 
 out.print("</body>");
 out.print("</html>");
