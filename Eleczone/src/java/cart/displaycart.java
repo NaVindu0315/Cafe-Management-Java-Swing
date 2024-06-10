@@ -139,6 +139,32 @@ public class displaycart extends HttpServlet {
         System.out.println("Total ="+(item1total+item2total+item3total));
         out.print("<h1 align='center'> Pako");
         out.print("</h1>");
+        
+     
+
+out.print("<table>");
+out.print("  <tr>");
+out.print("    <td>Column 1</td>");
+out.print("    <td>Column 2</td>");
+out.print("    <td>Column 3</td>");
+out.print("  </tr>");
+out.print("  <tr>");
+out.print("    <td>Data 1</td>");
+out.print("    <td>Data 2</td>");
+out.print("    <td>Data 3</td>");
+out.print("  </tr>");
+out.print("  <tr>");
+out.print("    <td>Data 4</td>");
+out.print("    <td>Data 5</td>");
+out.print("    <td>Data 6</td>");
+out.print("  </tr>");
+out.print("  <tr>");
+out.print("    <td>Data 7</td>");
+out.print("    <td>Data 8</td>");
+out.print("    <td>Data 9</td>");
+out.print("  </tr>");
+out.print("</table>");
+
        /* Cookie arr[] = request.getCookies();
         out.print("<h1 align='center'> Pako");
         out.print("</h1>");
