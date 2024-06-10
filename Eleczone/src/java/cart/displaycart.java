@@ -82,6 +82,9 @@ public class displaycart extends HttpServlet {
         double item2total = 0.0;
         double item3total = 0.0; 
         String Total = "";
+        String total1 = "";
+        String total2 = "";
+        String total3= "";
         
         double totaltoal = item1total + item2total+ item3total;
         
@@ -104,10 +107,14 @@ public class displaycart extends HttpServlet {
         } 
          else if (cookie.getName().equals("ckitemtotal1")) {
     item1total = cookie.getValue()!= null? Double.parseDouble(cookie.getValue()) : 0.0;
+    total1=cookie.getValue();
+    
 } else if (cookie.getName().equals("ckitemtotal2")) {
     item2total = cookie.getValue()!= null? Double.parseDouble(cookie.getValue()) : 0.0;
+    total2=cookie.getValue();
 } else if (cookie.getName().equals("ckitemtotal3")) {
     item3total = cookie.getValue()!= null? Double.parseDouble(cookie.getValue()) : 0.0;
+    total3=cookie.getValue();
         /*else if (cookie.getName().equals("ckitemtotal1")) {
             item1total = cookie.getValue();
         } else if (cookie.getName().equals("ckitemtotal2")) {
@@ -186,17 +193,23 @@ out.write("  </tr>");
 out.write("  <tr>");
 out.write("    <td style='width: 150px; height: 70px;'>  Data 1</td>");  // Increased width and height for data cells
 out.write("    <td style='width: 150px; height: 70px;'>Data 2</td>");
-out.write("    <td style='width: 150px; height: 70px;'>Data 3</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+total1+"</td>");
 out.write("  </tr>");
 out.write("  <tr>");
 out.write("    <td style='width: 150px; height: 70px;'>Data 4</td>");
 out.write("    <td style='width: 150px; height: 70px;'>Data 5</td>");
-out.write("    <td style='width: 150px; height: 70px;'>Data 6</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+total2+"</td>");
 out.write("  </tr>");
 out.write("  <tr>");
 out.write("    <td style='width: 150px; height: 70px;'>Data 7</td>");
 out.write("    <td style='width: 150px; height: 70px;'>Data 8</td>");
-out.write("    <td style='width: 150px; height: 70px;'>Data 9</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+total3+"</td>");
+out.write("  </tr>");
+
+out.write("  <tr>");
+out.write("    <td style='width: 150px; height: 70px;'></td>");
+out.write("    <td style='width: 150px; height: 70px;'>Total</td>");
+out.write("    <td style='width: 150px; height: 70px;'>"+(item1total+item2total+item3total)+ "</td>");
 out.write("  </tr>");
 out.print("</table>");
 out.print("</h2>");
