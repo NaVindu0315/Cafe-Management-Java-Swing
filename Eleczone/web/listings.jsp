@@ -13,6 +13,9 @@
     </head>
     <body>
         <h1>Items</h1>
+                <form action="displaycart" method="get">
+            <input type="submit" value="cart">
+        </form>
         <hr>
         <div align="center">
             <h1>
@@ -64,7 +67,7 @@
                     <select name="itemname3">
                     <option value="">Select your item</option>
                    
-                    <option value="MacBook_Air_M3">MacBook Air M3</option>
+                    <option value="MacBook_M3">MacBook Air M3</option>
                     </select>
                     <br>
                     <input type="number" name="itemcount3">

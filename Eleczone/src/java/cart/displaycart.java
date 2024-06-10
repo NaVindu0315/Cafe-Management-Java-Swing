@@ -222,6 +222,11 @@ out.print("    <input type='submit' value='Pay Now'>");
 out.print("  </form>");
 out.print("</div>");
 
+out.print("<div>");
+out.print("  <a href='listings.jsp'>Items Page</a>");
+out.print("</div>");
+
+
 
 out.print("</body>");
 out.print("</html>");
