@@ -142,7 +142,7 @@ public class displaycart extends HttpServlet {
         
         out.print("<div align='center'>");
         out.print("<h2>");
-        out.print("<table>");
+        out.print("<table align=>");
         out.print("  <tr>");
         out.print("    <td>Column 1</td>");
     out.print("    <td>Column 2</td>");
@@ -169,34 +169,34 @@ public class displaycart extends HttpServlet {
                 out.print("<!DOCTYPE html>");
 out.print("<html>");
 out.print("<head>");
-out.print("<title>Table with Styled Cells</title>");
+out.print("<title>Cart</title>");
 out.print("</head>");
 out.print("<body>");
 
-out.print("<h1 style='text-align: center;'> Pako </h1>");
+out.print("<h1 style='text-align: center;'> Shopping cart </h1>");
 
-out.print("<div style='text-align: center;'>");
+out.print("<div align='center'>");
 out.print("<h2>");
 out.print("<table>");
-out.write("  <tr>");
-out.write("    <th style='width: 150px; height: 50px;'>Column 1</th>");  // Increased width and height for header
-out.write("    <th style='width: 150px; height: 50px;'>Column 2</th>");
-out.write("    <th style='width: 150px; height: 50px;'>Column 3</th>");
+out.write("  <tr align='center'>");
+out.write("    <th style='width: 150px; height: 70px;'>Item Name</th>");  // Increased width and height for header
+out.write("    <th style='width: 150px; height: 70px;'>Item Count</th>");
+out.write("    <th style='width: 150px; height: 70px;'>Total</th>");
 out.write("  </tr>");
 out.write("  <tr>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 1</td>");  // Increased width and height for data cells
-out.write("    <td style='width: 150px; height: 30px;'>Data 2</td>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 3</td>");
+out.write("    <td style='width: 150px; height: 70px;'>  Data 1</td>");  // Increased width and height for data cells
+out.write("    <td style='width: 150px; height: 70px;'>Data 2</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Data 3</td>");
 out.write("  </tr>");
 out.write("  <tr>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 4</td>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 5</td>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 6</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Data 4</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Data 5</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Data 6</td>");
 out.write("  </tr>");
 out.write("  <tr>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 7</td>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 8</td>");
-out.write("    <td style='width: 150px; height: 30px;'>Data 9</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Data 7</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Data 8</td>");
+out.write("    <td style='width: 150px; height: 70px;'>Data 9</td>");
 out.write("  </tr>");
 out.print("</table>");
 out.print("</h2>");
